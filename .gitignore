@@ -9,3 +9,6 @@ tweetr-api/.env
 
 # The development sqlite file
 tweetr-api/database/development.sqlite
+
+# VSC folder
+.vscode/
