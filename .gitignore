@@ -1,0 +1,11 @@
+# Node modules
+tweetr-api/node_modules
+
+# Adonis directory for storing tmp files
+tweetr-api/tmp
+
+# Environment variables, never commit this file
+tweetr-api/.env
+
+# The development sqlite file
+tweetr-api/database/development.sqlite
