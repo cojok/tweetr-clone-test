@@ -3,17 +3,27 @@
 const Schema = use('Schema')
 
 class UserSchema extends Schema {
-  up () {
+  up() {
     this.create('users', table => {
       table.increments()
-      table.string('username', 80).notNullable().unique()
-      table.string('email', 254).notNullable().unique()
+      table
+        .string('name')
+        .table.string('username', 80)
+        .notNullable()
+        .unique()
+      table
+        .string('email', 254)
+        .notNullable()
+        .unique()
       table.string('password', 60).notNullable()
+      table.string('location').nullable()
+      table.string('profile_pic').nullable()
+      table.string('bio').nullable()
       table.timestamps()
     })
   }
 
-  down () {
+  down() {
     this.drop('users')
   }
 }
