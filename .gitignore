@@ -12,3 +12,4 @@ tweetr-api/database/development.sqlite
 
 # VSC folder
 .vscode/
+.vscode/settings.json
