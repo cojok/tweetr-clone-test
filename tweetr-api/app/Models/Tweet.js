@@ -3,13 +3,15 @@
 const Model = use('Model')
 
 class Tweet extends Model {
-  user() {
+  user () {
     return this.belongsTo('App/Models/User')
   }
-  replays() {
+
+  replays () {
     return this.hasMany('App/Models/Replay')
   }
-  favorites() {
+
+  favorites () {
     return this.hasMany('App/Models/Favorites')
   }
 }

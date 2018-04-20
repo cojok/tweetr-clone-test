@@ -3,7 +3,7 @@
 const Schema = use('Schema')
 
 class ReplaySchema extends Schema {
-  up() {
+  up () {
     this.create('replays', table => {
       table.increments()
       table
@@ -19,7 +19,7 @@ class ReplaySchema extends Schema {
     })
   }
 
-  down() {
+  down () {
     this.drop('replays')
   }
 }

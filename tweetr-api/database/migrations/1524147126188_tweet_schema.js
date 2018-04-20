@@ -3,7 +3,7 @@
 const Schema = use('Schema')
 
 class TweetSchema extends Schema {
-  up() {
+  up () {
     this.create('tweets', table => {
       table.increments()
       table
@@ -15,7 +15,7 @@ class TweetSchema extends Schema {
     })
   }
 
-  down() {
+  down () {
     this.drop('tweets')
   }
 }

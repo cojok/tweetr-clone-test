@@ -3,7 +3,7 @@
 const Schema = use('Schema')
 
 class FollowerSchema extends Schema {
-  up() {
+  up () {
     this.create('followers', table => {
       table.increments()
       table
@@ -18,7 +18,7 @@ class FollowerSchema extends Schema {
     })
   }
 
-  down() {
+  down () {
     this.drop('followers')
   }
 }

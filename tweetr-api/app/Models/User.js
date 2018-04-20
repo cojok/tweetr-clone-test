@@ -3,7 +3,7 @@
 const Model = use('Model')
 
 class User extends Model {
-  static boot() {
+  static boot () {
     super.boot()
 
     /**
@@ -26,9 +26,10 @@ class User extends Model {
    *
    * @return {Object}
    */
-  tokens() {
+  tokens () {
     return this.hasMany('App/Models/Token')
   }
+
   /**
    * A relationship on tweets
    *
@@ -36,27 +37,31 @@ class User extends Model {
    *
    * @return {Object}
    */
-  tweets() {
+  tweets () {
     return this.hasMany('App/Models/Tweet')
   }
-  followers() {
+
+  followers () {
     return this.belongsToMany(
       'App/Models/User',
       'user_id',
       'follower_id'
     ).pivotTable('followers')
   }
-  following() {
+
+  following () {
     return this.belongsToMany(
       'App/Models/User',
       'follower_id',
       'user_id'
     ).pivotTable('followers')
   }
-  replays() {
+
+  replays () {
     return this.hasMany('App/Models/Replay')
   }
-  favorites() {
+
+  favorites () {
     return this.hasMany('App/Models/Favorite')
   }
 }

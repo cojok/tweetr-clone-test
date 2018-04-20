@@ -3,10 +3,11 @@
 const Model = use('Model')
 
 class Favorite extends Model {
-  user() {
+  user () {
     return this.belongsTo('App/Models/User')
   }
-  tweet() {
+
+  tweet () {
     return this.belongsTo('App/Models7Tweet')
   }
 }

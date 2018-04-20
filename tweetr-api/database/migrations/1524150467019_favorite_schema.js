@@ -3,7 +3,7 @@
 const Schema = use('Schema')
 
 class FavoriteSchema extends Schema {
-  up() {
+  up () {
     this.create('favorites', table => {
       table.increments()
       table
@@ -18,7 +18,7 @@ class FavoriteSchema extends Schema {
     })
   }
 
-  down() {
+  down () {
     this.drop('favorites')
   }
 }
