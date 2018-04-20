@@ -31,7 +31,7 @@ class User extends Model {
   }
 
   /**
-   * A relationship on tweets
+   * A user can post many tweets
    *
    * @method tweets
    *
@@ -41,6 +41,13 @@ class User extends Model {
     return this.hasMany('App/Models/Tweet')
   }
 
+  /**
+   * A user can have many followers
+   *
+   * @method followers
+   *
+   * @return {Object}
+   */
   followers () {
     return this.belongsToMany(
       'App/Models/User',
@@ -49,6 +56,13 @@ class User extends Model {
     ).pivotTable('followers')
   }
 
+  /**
+   * A user can follow other users
+   *
+   * @method followers
+   *
+   * @return {Object}
+   */
   following () {
     return this.belongsToMany(
       'App/Models/User',
@@ -57,10 +71,24 @@ class User extends Model {
     ).pivotTable('followers')
   }
 
-  replays () {
+  /**
+   * A user can post many replies to a tweet.
+   *
+   * @method replies
+   *
+   * @return {Object}
+   */
+  replies () {
     return this.hasMany('App/Models/Replay')
   }
 
+  /**
+   * A user can have many favorite tweets.
+   *
+   * @method favorites
+   *
+   * @return {Object}
+   */
   favorites () {
     return this.hasMany('App/Models/Favorite')
   }

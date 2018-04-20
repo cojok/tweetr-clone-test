@@ -9,12 +9,12 @@ class ReplaySchema extends Schema {
       table
         .integer('user_id')
         .unsigned()
-        .notNullabel()
+        .notNullable()
       table
         .integer('tweet_id')
         .unsigned()
-        .notNullabel()
-      table.text('replay').notNullabel()
+        .notNullable()
+      table.text('replay').notNullable()
       table.timestamps()
     })
   }
