@@ -2,9 +2,9 @@
 
 const Schema = use('Schema')
 
-class ReplaySchema extends Schema {
+class ReplySchema extends Schema {
   up () {
-    this.create('replays', table => {
+    this.create('replys', table => {
       table.increments()
       table
         .integer('user_id')
@@ -14,14 +14,14 @@ class ReplaySchema extends Schema {
         .integer('tweet_id')
         .unsigned()
         .notNullable()
-      table.text('replay').notNullable()
+      table.text('reply').notNullable()
       table.timestamps()
     })
   }
 
   down () {
-    this.drop('replays')
+    this.drop('replys')
   }
 }
 
-module.exports = ReplaySchema
+module.exports = ReplySchema

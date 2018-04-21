@@ -2,9 +2,9 @@
 
 const Model = use('Model')
 
-class Replay extends Model {
+class Reply extends Model {
   /**
-   * A replay belongs to a user
+   * A reply belongs to a user
    * @returns {Object}
    */
   user () {
@@ -12,7 +12,7 @@ class Replay extends Model {
   }
 
   /**
-   * A replay belings to a tweet
+   * A reply belongs to a tweet
    * @returns {BelongsTo}
    */
   tweet () {
@@ -20,4 +20,4 @@ class Replay extends Model {
   }
 }
 
-module.exports = Replay
+module.exports = Reply

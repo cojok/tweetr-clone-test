@@ -12,11 +12,11 @@ class Tweet extends Model {
   }
 
   /**
-   * A tweet has many replays
+   * A tweet has many replys
    * @returns {Obejct}
    */
-  replays () {
-    return this.hasMany('App/Models/Replay')
+  replys () {
+    return this.hasMany('App/Models/Reply')
   }
 
   /**

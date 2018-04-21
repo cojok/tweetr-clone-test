@@ -43,9 +43,7 @@ class User extends Model {
 
   /**
    * A user can have many followers
-   *
    * @method followers
-   *
    * @return {Object}
    */
   followers () {
@@ -58,9 +56,7 @@ class User extends Model {
 
   /**
    * A user can follow other users
-   *
    * @method followers
-   *
    * @return {Object}
    */
   following () {
@@ -73,20 +69,16 @@ class User extends Model {
 
   /**
    * A user can post many replies to a tweet.
-   *
    * @method replies
-   *
    * @return {Object}
    */
   replies () {
-    return this.hasMany('App/Models/Replay')
+    return this.hasMany('App/Models/Reply')
   }
 
   /**
    * A user can have many favorite tweets.
-   *
    * @method favorites
-   *
    * @return {Object}
    */
   favorites () {
