@@ -11,9 +11,12 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
+    "fix-lint" : "eslint --fix . --ext .js,.vue src",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "vee-validate": "^2.0.6",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

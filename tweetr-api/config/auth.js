@@ -36,7 +36,7 @@ module.exports = {
 
   /*
   |--------------------------------------------------------------------------
-  | Basic Auth
+  | Basic auth
   |--------------------------------------------------------------------------
   |
   | The basic auth authenticator uses basic auth header to authenticate a

@@ -25,7 +25,7 @@ const globalMiddleware = [
 |
 | // define
 | {
-|   auth: 'Adonis/Middleware/Auth'
+|   auth: 'Adonis/Middleware/auth'
 | }
 |
 | // use
@@ -33,7 +33,7 @@ const globalMiddleware = [
 |
 */
 const namedMiddleware = {
-  auth: 'Adonis/Middleware/Auth'
+  auth: 'Adonis/Middleware/auth'
 }
 
 /*
